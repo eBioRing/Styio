@@ -16,8 +16,8 @@ def find_benchmark_root(styio_root: Path) -> Path:
 
     candidates = [
         styio_root.parent / "styio-benchmark",
-        styio_root.parent.parent / "eBioRing" / "styio-benchmark",
-        Path.home() / "eBioRing" / "styio-benchmark",
+        styio_root.parent.parent / "SymPolicy" / "styio-benchmark",
+        Path.home() / "SymPolicy" / "styio-benchmark",
     ]
     for candidate in candidates:
         if (candidate / "tools" / "perf-report.py").is_file():
