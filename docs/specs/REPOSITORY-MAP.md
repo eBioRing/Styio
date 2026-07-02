@@ -37,8 +37,8 @@ Styio 当前采用“主仓库 + 配件仓库”的生态结构：
 
 当前项目共识是：**主仓库之外的关键配件仓库已经有了清晰职责边界，但实现成熟度和交付闭合度仍不一致。** 因此，本文件优先解决“仓库角色识别”和“文档归属”，而不是给出实时状态看板。
 
-**Inventory refresh:** 2026-04-24 使用 `gh repo list eBioRing --limit 200`
-与 `gh search repos 'styio org:eBioRing'` 核对组织仓库。仓库的每周活跃度、
+**Inventory refresh:** 2026-04-24 使用 `gh repo list SymPolicy --limit 200`
+与 `gh search repos 'styio org:SymPolicy'` 核对组织仓库。仓库的每周活跃度、
 issue 状态和发布进度不在本文件维护。
 
 ---
@@ -47,17 +47,17 @@ issue 状态和发布进度不在本文件维护。
 
 | Repository | Role | Owns What | Does Not Own |
 |------------|------|-----------|--------------|
-| [`Styio`](https://github.com/eBioRing/Styio) / 当前开发镜像 [`README.md`](../../README.md) | 主语言与编译器仓库 | 语言设计、形式文法、编译器实现、CLI、测试、主文档入口 | 包管理器、编辑器插件、产品白皮书、示例工程生态 |
-| [`styio-platform`](https://github.com/eBioRing/styio-platform) | 平台级产品/hosted surface 整合入口 | 平台产品壳层、hosted surface 占位、未来跨仓平台入口与产品整合说明 | 语言语义、编译器实现、包解析规则 |
-| [`styio-spio`](https://github.com/eBioRing/styio-spio) | 包管理器、registry/cloud backend、repo-hosted control console | 包格式、包解析/安装/发布、依赖解析、仓库源协议、仓库托管与云平台后台、仓库托管的管控台前端、跨仓 hosted API 合同包 | Styio 核心语言语义与编译器实现 |
-| [`styio-audit`](https://github.com/eBioRing/styio-audit) | 集中审计框架 | auditable-code 框架、默认审计模块、Styio 专用审计模块与外部审计入口 | 编译器语义真相、语言接受测试、仓库本地代码实现 |
-| [`styio-dev-doc`](https://github.com/eBioRing/styio-dev-doc) | 开发者文档仓库 | 跨仓库开发手册、搭建流程、协作说明、外部开发者上手指南 | 语言权威语义、编译器测试验收、产品白皮书 |
-| [`styio-dev-env`](https://github.com/eBioRing/styio-dev-env) | 标准开发环境 | devcontainer、toolchain bootstrap、统一环境脚本、CI/本地环境约定 | 语言设计、产品定义、示例工程内容 |
-| [`styio-book`](https://github.com/eBioRing/styio-book) | 产品白皮书 | 产品愿景、定位、理念叙事、对外说明材料 | 编译器行为细节、测试接受标准、工程实现规范 |
-| [`styio-view`](https://github.com/eBioRing/styio-view) | 面向用户的编辑与运行视图前端 | 用户界面、编辑器壳层、运行视窗、面向人的工作区与交互；通过 adapter 消费工具链后端 | 编译器主实现、语言 SSOT、包管理规则、仓库/云平台后端语义 |
-| [`styio-example`](https://github.com/eBioRing/styio-example) | 示例工程集合 | 可运行样例、模板项目、可复用示例模式 | 语言规范正文、编译器验收标准 |
-| [`styio-ext-vsc`](https://github.com/eBioRing/styio-ext-vsc) | VS Code 插件 | 语法高亮、片段、编辑器交互、未来可能的语言服务集成 | 语言语义权威定义、编译器主行为 |
-| [`styio-deprecated`](https://github.com/eBioRing/styio-deprecated) | 旧实现历史归档 | 历史代码、迁移参照、考古材料 | 当前语言语义、当前测试验收、活跃开发入口 |
+| [`Styio`](https://github.com/SymPolicy/Styio) / 当前开发镜像 [`README.md`](../../README.md) | 主语言与编译器仓库 | 语言设计、形式文法、编译器实现、CLI、测试、主文档入口 | 包管理器、编辑器插件、产品白皮书、示例工程生态 |
+| [`pafio`](https://github.com/SymPolicy/Pafio) | 平台级产品/hosted surface 整合入口 | 平台产品壳层、hosted surface 占位、未来跨仓平台入口与产品整合说明 | 语言语义、编译器实现、包解析规则 |
+| [`styio-pafio`](https://github.com/SymPolicy/styio-pafio) | 包管理器、registry/cloud backend、repo-hosted control console | 包格式、包解析/安装/发布、依赖解析、仓库源协议、仓库托管与云平台后台、仓库托管的管控台前端、跨仓 hosted API 合同包 | Styio 核心语言语义与编译器实现 |
+| [`styio-audit`](https://github.com/SymPolicy/styio-audit) | 集中审计框架 | auditable-code 框架、默认审计模块、Styio 专用审计模块与外部审计入口 | 编译器语义真相、语言接受测试、仓库本地代码实现 |
+| [`styio-dev-doc`](https://github.com/SymPolicy/styio-dev-doc) | 开发者文档仓库 | 跨仓库开发手册、搭建流程、协作说明、外部开发者上手指南 | 语言权威语义、编译器测试验收、产品白皮书 |
+| [`styio-dev-env`](https://github.com/SymPolicy/styio-dev-env) | 标准开发环境 | devcontainer、toolchain bootstrap、统一环境脚本、CI/本地环境约定 | 语言设计、产品定义、示例工程内容 |
+| [`styio-book`](https://github.com/SymPolicy/styio-book) | 产品白皮书 | 产品愿景、定位、理念叙事、对外说明材料 | 编译器行为细节、测试接受标准、工程实现规范 |
+| [`styio-view`](https://github.com/SymPolicy/styio-view) | 面向用户的编辑与运行视图前端 | 用户界面、编辑器壳层、运行视窗、面向人的工作区与交互；通过 adapter 消费工具链后端 | 编译器主实现、语言 SSOT、包管理规则、仓库/云平台后端语义 |
+| [`styio-example`](https://github.com/SymPolicy/styio-example) | 示例工程集合 | 可运行样例、模板项目、可复用示例模式 | 语言规范正文、编译器验收标准 |
+| [`styio-ext-vsc`](https://github.com/SymPolicy/styio-ext-vsc) | VS Code 插件 | 语法高亮、片段、编辑器交互、未来可能的语言服务集成 | 语言语义权威定义、编译器主行为 |
+| [`styio-deprecated`](https://github.com/SymPolicy/styio-deprecated) | 旧实现历史归档 | 历史代码、迁移参照、考古材料 | 当前语言语义、当前测试验收、活跃开发入口 |
 
 ---
 
@@ -109,7 +109,7 @@ issue 状态和发布进度不在本文件维护。
 
 ## 6. 维护规则
 
-1. 新增、重命名、归档 Styio 官方仓库时，先用 `gh repo list eBioRing --limit 200` 核对组织清单，再更新本文件和根目录 [`../../README.md`](../../README.md) 的生态列表。
+1. 新增、重命名、归档 Styio 官方仓库时，先用 `gh repo list SymPolicy --limit 200` 核对组织清单，再更新本文件和根目录 [`../../README.md`](../../README.md) 的生态列表。
 2. 如果某个配件仓库开始承担稳定、可持续维护的文档权威边界，应同时更新 [`./DOCUMENTATION-POLICY.md`](./DOCUMENTATION-POLICY.md) 的 SSOT 表。
 3. 如果某个仓库仍只处于占位或严重滞后状态，可以在其自身仓库中写状态说明，但不要在主仓库里维护实时进度表。
 4. 本文件记录的是“结构与边界”，不是项目管理看板；不要把逐周进度、issue 清单、燃尽信息写进来。

@@ -16,8 +16,8 @@ find_benchmark_root() {
 
   local candidates=(
     "${styio_root}/../styio-benchmark"
-    "${styio_root}/../../eBioRing/styio-benchmark"
-    "${HOME:-}/eBioRing/styio-benchmark"
+    "${styio_root}/../../SymPolicy/styio-benchmark"
+    "${HOME:-}/SymPolicy/styio-benchmark"
   )
   local candidate
   for candidate in "${candidates[@]}"; do
